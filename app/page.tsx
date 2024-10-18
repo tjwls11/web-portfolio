@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import NextImg from 'next/image'
 import { MdEmail, MdArrowForward } from 'react-icons/md'
-import { FaInstagramSquare, FaGithub } from 'react-icons/fa'
+import { FaInstagramSquare } from 'react-icons/fa'
 import { SiNotion } from 'react-icons/si'
 
 export default function Home() {
