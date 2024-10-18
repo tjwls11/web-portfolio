@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 export default function ProjectPage() {
   // 프로젝트 정보 배열
@@ -64,10 +65,12 @@ export default function ProjectPage() {
                     controls
                   />
                 ) : (
-                  <img
+                  <Image
                     src={project.imageSrc}
                     alt={project.title}
                     className="max-w-full h-64 object-cover rounded-lg mb-4"
+                    width={300}
+                    height={200}
                   />
                 )}
               </div>

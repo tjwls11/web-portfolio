@@ -17,7 +17,7 @@ export default function Home() {
       {/* 배경 위 */}
       <div className="flex flex-col justify-center items-center min-h-screen ml-9 relative z-10 animate-slideUp">
         <h1 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-5xl">
-          Hello I'm SeoJin
+          Hello I&apos;m SeoJin
         </h1>
         <p className="mt-4 text-base text-white/70 sm:mt-6">
           안녕하세요 정보보호학과 23학번 백서진입니다
