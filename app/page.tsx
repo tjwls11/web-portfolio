@@ -15,7 +15,9 @@ export default function Home() {
         fill
       />
       {/* 배경 위 */}
-      <div className="flex flex-col justify-center items-center min-h-screen relative animate-slideUp text-center p-8">
+      <div className="flex flex-col justify-center items-center min-h-screen relative animate-slideUp text-center p-4">
+        {' '}
+        {/* 패딩 줄임 */}
         <h1 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-5xl">
           Hello I&apos;m SeoJin
         </h1>
@@ -34,7 +36,9 @@ export default function Home() {
       </div>
 
       {/* 배경 아래 */}
-      <div className="flex flex-col justify-center items-center relative z-10 animate-slideUp text-center p-8">
+      <div className="flex flex-col justify-center items-center relative z-10 animate-slideUp text-center p-4">
+        {' '}
+        {/* 패딩 줄임 */}
         <h1 className="text-black text-3xl font-bold mb-4">My contact</h1>
         <div className="mt-2 flex flex-row space-x-12 justify-center items-center pr-16">
           <div className="flex flex-col items-center">

@@ -53,7 +53,9 @@ export default function AboutPage() {
         {/* 오른쪽 섹션 */}
         <div className="flex-1 mt-20 md:mt-0">
           <h1 className="text-3xl font-bold mb-2">About Me</h1>
-          <h2 className="text-2xl mb-4">
+          <h2 className="text-2xl mb-4 md:text-xl sm:text-lg">
+            {' '}
+            {/* 반응형 클래스 추가 */}
             안녕하세요 정보보호학과 백서진입니다
           </h2>
           <p className="mb-4">
