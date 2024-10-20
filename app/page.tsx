@@ -37,16 +37,16 @@ export default function Home() {
 
       {/* 배경 아래 */}
       <div className="flex flex-col justify-center items-center relative z-10 animate-slideUp text-center p-4">
-        {' '}
-        {/* 패딩 줄임 */}
         <h1 className="text-black text-3xl font-bold mb-4">My contact</h1>
-        <div className="mt-2 flex flex-row space-x-12 justify-center items-center pr-16">
-          <div className="flex flex-col items-center">
+        <div className="mt-2 flex flex-row space-x-12 justify-center items-start pr-16">
+          {' '}
+          {/* items-center를 items-start로 변경 */}
+          <div className="flex flex-col items-center pl-3">
             <MdEmail className="text-3xl mb-1 transition-transform duration-200 transform hover:scale-110" />
-            <p className="text-center text-sm">rcsj10@naver.com</p>
+            <p className="text-center text-sm break-all">rcsj10@naver.com</p>{' '}
+            {/* break-all 추가 */}
           </div>
-
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center pr-3">
             <Link
               href="https://www.instagram.com/seojin___.b/"
               target="_blank"
@@ -57,7 +57,6 @@ export default function Home() {
               <p className="text-center text-sm">Instagram</p>
             </Link>
           </div>
-
           <div className="flex flex-col items-center pl-3">
             <Link
               href="https://marble-acapella-568.notion.site/f1608ef20da24d3da95c6a5b1233500f?pvs=25"
