@@ -29,11 +29,9 @@ export default function AboutPage() {
   }, [])
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white p-8">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-white p-6">
       <div className="flex flex-col md:flex-row items-center max-w-4xl w-full mx-auto mb-8">
         <div className="flex flex-col items-center mt-9 md:mt-0 md:items-start">
-          {' '}
-          {/* 중앙 정렬을 위한 flex 추가 */}
           <Link
             href="https://github.com/tjwls11"
             target="_blank"
@@ -53,7 +51,7 @@ export default function AboutPage() {
           </div>
         </div>
         {/* 오른쪽 섹션 */}
-        <div className="flex-1 mt-20 md:mt-0">
+        <div className="flex-1 mt-8 md:mt-0">
           <h1 className="text-3xl font-bold mb-2">About Me</h1>
           <h2 className="text-2xl mb-4 md:text-xl sm:text-lg">
             안녕하세요 정보보호학과 백서진입니다
@@ -67,7 +65,7 @@ export default function AboutPage() {
       </div>
       {/* 박스 */}
       <div className="border border-black p-6 mt-4 mb-8 w-full aspect-[16/3]">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="flex items-center mb-2">
             <FaBirthdayCake className="mr-2 text-2xl" />
             2004.09.03
