@@ -31,7 +31,9 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-white p-8">
       <div className="flex flex-col md:flex-row items-center max-w-4xl w-full mx-auto mb-8">
-        <div className="mr-16 flex flex-col items-center mt-9 md:mt-0 md:items-start">
+        <div className="flex flex-col items-center mt-9 md:mt-0 md:items-start">
+          {' '}
+          {/* 중앙 정렬을 위한 flex 추가 */}
           <Link
             href="https://github.com/tjwls11"
             target="_blank"
@@ -54,8 +56,6 @@ export default function AboutPage() {
         <div className="flex-1 mt-20 md:mt-0">
           <h1 className="text-3xl font-bold mb-2">About Me</h1>
           <h2 className="text-2xl mb-4 md:text-xl sm:text-lg">
-            {' '}
-            {/* 반응형 클래스 추가 */}
             안녕하세요 정보보호학과 백서진입니다
           </h2>
           <p className="mb-4">
@@ -89,7 +89,7 @@ export default function AboutPage() {
           </div>
           <div className="flex items-center mb-2">
             <MdOutlineMailOutline className="mr-2 text-2xl" />
-            rcsj10@naver.com
+            <span className="text-sm">rcsj10@naver.com</span>
           </div>
 
           <Link href="https://marble-acapella-568.notion.site/f1608ef20da24d3da95c6a5b1233500f?pvs=25">
