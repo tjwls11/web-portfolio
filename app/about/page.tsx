@@ -10,7 +10,7 @@ import { SiNotion } from 'react-icons/si'
 import { GiLion } from 'react-icons/gi'
 
 export default function AboutPage() {
-  const [profileImage, setProfileImage] = useState('/images/icon1.png') // 기본 이미지 경로 설정
+  const [profileImage, setProfileImage] = useState('/images/icon1.png')
 
   useEffect(() => {
     const fetchGitHubProfile = async () => {
@@ -18,7 +18,7 @@ export default function AboutPage() {
       await fetch(`https://api.github.com/users/${username}`)
         .then((response) => response.json())
         .then((data) => {
-          setProfileImage(data.avatar_url) // 프로필 이미지를 항상 불러옴
+          setProfileImage(data.avatar_url)
         })
         .catch((error) => {
           console.error('Failed to fetch profile image', error)
@@ -29,12 +29,9 @@ export default function AboutPage() {
   }, [])
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white">
-      <div className="flex items-start max-w-4xl w-full mx-auto">
-        {/* 왼쪽 섹션 유지 */}
-        <div className="mr-16 flex flex-col items-center mt-9">
-          {' '}
-          {/* 프로필 사진과 텍스트를 중앙 정렬 */}
+    <div className="min-h-screen flex flex-col items-center justify-center bg-white p-8">
+      <div className="flex flex-col md:flex-row items-center max-w-4xl w-full mx-auto mb-8">
+        <div className="mr-16 flex flex-col items-center mt-9 md:mt-0 md:items-start">
           <Link
             href="https://github.com/tjwls11"
             target="_blank"
@@ -42,20 +39,19 @@ export default function AboutPage() {
           >
             <Image
               src={profileImage}
-              alt="깃허브프로필"
+              alt="깃허브 프로필"
               className="rounded-full mb-4 object-cover"
               width={200}
               height={200}
             />
           </Link>
-          <div className="text-center">
+          <div className="text-center md:text-left">
             <p>저의 깃허브 프로필 입니다</p>
             <p>클릭시 깃허브 페이지로 이동합니다</p>
           </div>
         </div>
-
         {/* 오른쪽 섹션 */}
-        <div className="flex-1 mt-20">
+        <div className="flex-1 mt-20 md:mt-0">
           <h1 className="text-3xl font-bold mb-2">About Me</h1>
           <h2 className="text-2xl mb-4">
             안녕하세요 정보보호학과 백서진입니다
@@ -67,9 +63,8 @@ export default function AboutPage() {
           </p>
         </div>
       </div>
-
       {/* 박스 */}
-      <div className="border border-black p-4 mt-4 mb-8 w-full aspect-[16/3]">
+      <div className="border border-black p-6 mt-4 mb-8 w-full aspect-[16/3]">
         <div className="grid grid-cols-2 gap-4">
           <div className="flex items-center mb-2">
             <FaBirthdayCake className="mr-2 text-2xl" />
@@ -114,9 +109,7 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-
       <hr className="my-4 border-b border-black w-full" />
-
       {/* 동영상 */}
       <div className="flex flex-col items-center mt-5">
         <div className="border-2 border-black w-full aspect-[16/9] flex items-center justify-center mb-4 max-w-3xl mx-auto">
@@ -131,7 +124,6 @@ export default function AboutPage() {
           이번 포트폴리오 프로젝트를 하면서 느낀점을 동영상으로 만들었습니다
         </p>
       </div>
-
       <hr className="my-4 border-b border-black w-full" />
     </div>
   )
