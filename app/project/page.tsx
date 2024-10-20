@@ -33,7 +33,7 @@ export default function ProjectPage() {
     {
       title: '해커톤',
       imageSrc: '/project/해커톤.mp4',
-      description: '멋쟁이사자처럼 해커톤 프로젝트입니다',
+      description: '멋쟁이사자처럼 해커톤 프로젝트',
       subDescription:
         '개인의 정신 건강과 감정 관리를 위해 일상과 감정을 기록하는 서비스입니다',
       projectLink:
@@ -43,61 +43,71 @@ export default function ProjectPage() {
   ]
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <section className="my-12 w-full max-w-6xl">
-        <h1 className="text-4xl text-center mb-10 font-bold text-gray-800">
-          MY PROJECTS
-        </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mx-auto px-4">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-lg text-center shadow-lg"
-            >
-              <h2 className="text-2xl font-bold mb-4 text-gray-800">
-                {project.title}
-              </h2>
-              <div className="flex justify-center">
-                {project.imageSrc.endsWith('.mp4') ? (
+    <div className="p-8">
+      <h1 className="text-3xl font-bold text-center mt-11 pt-8 mb-5">
+        MY PROJECTS
+      </h1>
+      <p className="text-center mb-11 pb-11">
+        제가 진행한 프로젝트를 소개합니다
+      </p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mx-auto px-4 mt-11 pt-4">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="bg-white border border-gray-300 rounded-lg p-5 shadow-lg"
+          >
+            <h2 className="text-2xl text-center font-semibold text-blue-950 mb-4">
+              {project.title}
+            </h2>
+            <div className="flex justify-center mb-4">
+              {project.imageSrc.endsWith('.mp4') ? (
+                <div className="flex items-center justify-center w-[500px] h-[500px] sm:w-[280px] sm:h-[280px]">
                   <video
                     src={project.imageSrc}
-                    className="max-w-full h-64 object-cover rounded-lg mb-4"
+                    className="w-full h-full object-cover rounded-lg"
                     controls
                   />
-                ) : (
+                </div>
+              ) : (
+                <div className="flex items-center justify-center w-[500px] h-[500px] sm:w-[280px] sm:h-[280px]">
                   <Image
                     src={project.imageSrc}
                     alt={project.title}
-                    className="max-w-full h-64 object-cover rounded-lg mb-4"
-                    width={300}
-                    height={200}
+                    width={500}
+                    height={400}
+                    className="rounded-lg object-cover mb-4 shadow-lg"
                   />
-                )}
-              </div>
-              <p className="text-gray-600 mb-2">{project.description}</p>
-              <p className="text-gray-500 mb-4">{project.subDescription}</p>
-              <div className="flex justify-center space-x-4 mt-4">
-                <a
-                  href={project.projectLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition"
-                >
-                  바로가기
-                </a>
-                <a
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition"
-                >
-                  깃허브
-                </a>
-              </div>
+                </div>
+              )}
             </div>
-          ))}
-        </div>
-      </section>
+
+            <p className="text-gray-700 text-center mt-2 mb-2">
+              {project.description}
+            </p>
+            <p className="text-gray-500 text-center mb-4">
+              {project.subDescription}
+            </p>
+            <div className="flex justify-center space-x-4 mt-4">
+              <a
+                href={project.projectLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-600 text-white py-2 px-4 rounded-lg hover:bg-gray-800 transition"
+              >
+                바로가기
+              </a>
+              <a
+                href={project.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-600 text-white py-2 px-4 rounded-lg hover:bg-gray-800 transition"
+              >
+                깃허브
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

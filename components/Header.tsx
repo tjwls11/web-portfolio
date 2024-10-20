@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <div>
       <nav className="fixed top-0 left-0 right-0 py-6 px-8 flex items-center justify-between z-30 bg-gray-800">
-        <div className="text-white text-lg font-bold">
+        <div className="text-white font-black text-2xl">
           <Link href=".">Portfolio</Link>
         </div>
         <div className="hidden lg:flex space-x-4">
