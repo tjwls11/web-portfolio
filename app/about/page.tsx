@@ -53,7 +53,7 @@ export default function AboutPage() {
         {/* 오른쪽 섹션 */}
         <div className="flex-1 mt-8 md:mt-0">
           <h1 className="text-3xl font-bold mb-2">About Me</h1>
-          <h2 className="text-2xl mb-4 md:text-xl sm:text-lg">
+          <h2 className="text-2xl mb-4 md:text-xl sm:text-lg whitespace-nowrap">
             안녕하세요 정보보호학과 백서진입니다
           </h2>
           <p className="mb-4">
