@@ -42,7 +42,7 @@ export default function Header() {
 
       {menuOpen && (
         <div className="lg:hidden bg-gray-800 text-white mt-16 z-20 fixed top-0 left-0 right-0">
-          <div className="flex flex-col space-y-4 p-4 text-lg font-bold">
+          <div className="flex flex-col space-y-4 p-4 text-lg font-bold ml-5">
             <Link
               href="/about"
               className="hover:text-purple-400 transition"

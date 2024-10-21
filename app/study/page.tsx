@@ -65,6 +65,7 @@ export default function StudyPage() {
         노션페이지에 정리해가며 공부하였습니다
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mx-auto px-4 mt-11 pt-4">
+        {/* 메서드 사용  */}
         {studyItems.map((item, index) => (
           <div
             key={index}
@@ -78,7 +79,7 @@ export default function StudyPage() {
               alt={`${item.title} 이미지`}
               width={500}
               height={400}
-              className="rounded-lg mb-4 shadow-lg" // 이미지에 shadow-lg 추가
+              className="rounded-lg mb-4 shadow-lg"
             />
 
             <p className="text-gray-700 text-center mt-9 mb-6">

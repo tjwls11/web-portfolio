@@ -15,6 +15,7 @@ export default function Home() {
         fill
       />
       {/* 배경 위 */}
+      {/*animate-slideUp 효과*/}
       <div className="flex flex-col justify-center items-center min-h-screen relative animate-slideUp text-center p-4">
         <h1 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-5xl">
           Hello I&apos;m SeoJin
@@ -34,11 +35,10 @@ export default function Home() {
       </div>
 
       {/* 배경 아래 */}
+      {/* animate-slideUp 효과*/}
       <div className="flex flex-col justify-center items-center relative z-10 animate-slideUp text-center p-4">
         <h1 className="text-black text-3xl font-bold mb-4">My contact</h1>
         <div className="mt-2 grid grid-cols-1 sm:grid-cols-3 gap-4 justify-items-center">
-          {' '}
-          {/* 그리드 설정 */}
           <div className="flex flex-col items-center">
             <MdEmail className="text-3xl mb-1 transition-transform duration-200 transform hover:scale-110" />
             <p className="text-center text-sm break-all">rcsj10@naver.com</p>

@@ -9,29 +9,32 @@ import { FaInstagram } from 'react-icons/fa6'
 import { SiNotion } from 'react-icons/si'
 import { GiLion } from 'react-icons/gi'
 
+// GitHub 프로필 가져오기
+async function GitHubProfile(username: string) {
+  // ISR 방식 사용
+  const response = await fetch(`https://api.github.com/users/${username}`)
+  const data = await response.json()
+  return data.avatar_url || '/images/icon1.png'
+}
+
 export default function AboutPage() {
   const [profileImage, setProfileImage] = useState('/images/icon1.png')
 
   useEffect(() => {
-    const fetchGitHubProfile = async () => {
-      const username = 'tjwls11'
-      await fetch(`https://api.github.com/users/${username}`)
-        .then((response) => response.json())
-        .then((data) => {
-          setProfileImage(data.avatar_url)
-        })
-        .catch((error) => {
-          console.error('Failed to fetch profile image', error)
-        })
+    const username = 'tjwls11'
+
+    const getProfileImage = async () => {
+      const image = await GitHubProfile(username)
+      setProfileImage(image)
     }
 
-    fetchGitHubProfile()
+    getProfileImage()
   }, [])
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white p-6">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-white p-6 px-4 md:px-12 mt-9">
       <div className="flex flex-col md:flex-row items-center max-w-4xl w-full mx-auto mb-8">
-        <div className="flex flex-col items-center mt-9 md:mt-0 md:items-start">
+        <div className="flex flex-col items-center mt-20 md:mt-0 md:items-start md:mr-16">
           <Link
             href="https://github.com/tjwls11"
             target="_blank"
@@ -50,8 +53,9 @@ export default function AboutPage() {
             <p>클릭시 깃허브 페이지로 이동합니다</p>
           </div>
         </div>
+
         {/* 오른쪽 섹션 */}
-        <div className="flex-1 mt-8 md:mt-0">
+        <div className="flex-1 mt-12 md:mt-16">
           <h1 className="text-3xl font-bold mb-2">About Me</h1>
           <h2 className="text-2xl mb-4 md:text-xl sm:text-lg whitespace-nowrap">
             안녕하세요 정보보호학과 백서진입니다
